@@ -1,4 +1,4 @@
-# 🌼 Todo List — React.js
+# Todo List — React.js
 
 Aplikasi **Todo List** (frontend saja) untuk Kuis Praktikum Pengembangan Frontend.
 Dibangun dengan **React.js + Vite + Tailwind CSS**, memakai data dummy dan React State, tanpa backend / REST API.
