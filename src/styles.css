@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-pink: #ff5c9a;
+  --color-pink-shadow: #d93f7c;
+  --color-lilac: #9b72e6;
+  --color-lilac-shadow: #7a55c4;
+  --color-sky: #4aa8ff;
+  --color-sky-shadow: #2f85d6;
+  --color-coral: #ff6b6b;
+  --color-coral-shadow: #d94c4c;
+  --color-mint: #2fbf9b;
+  --color-blush: #fff0f6;
+  --color-blush-2: #ffe1ee;
+  --color-ink: #4a2c46;
+  --color-muted: #9a7a93;
+
+  --radius-card: 24px;
+  --shadow-card: 0 12px 30px rgba(255, 92, 154, 0.16);
+
+  --animate-fade: fade 0.15s ease-out;
+  --animate-pop: pop 0.18s ease-out;
+  --animate-rise: rise 0.25s ease-out;
+
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes pop {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translate(-50%, 12px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+  }
+}
+
+/* Gaya global yang tidak bisa jadi class di elemen (body & pseudo-element latar) */
+@layer base {
+  html {
+    line-height: normal;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe4f0 0%, #fff0f6 50%, #f1e6ff 100%) fixed;
+  }
+
+  /* gumpalan warna lembut di latar */
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(70px);
+  }
+  body::before { width: 360px; height: 360px; background: rgba(255, 92, 154, 0.22); top: -110px; right: -80px; }
+  body::after { width: 320px; height: 320px; background: rgba(155, 114, 230, 0.25); bottom: -100px; left: -80px; }
+}
