@@ -41,14 +41,7 @@ mengganti isinya dengan pemanggilan:
 - `PUT /api/todos/:id` — perbarui tugas
 - `DELETE /api/todos/:id` — hapus tugas
 
-## Cara Menjalankan
-
-```bash
-npm install
-npm run dev
-```
-
-Buka `http://localhost:5173`.
+Buka `http://localhost:5173` BUAT JALANIN WEB.
 
 ## Struktur Folder
 
