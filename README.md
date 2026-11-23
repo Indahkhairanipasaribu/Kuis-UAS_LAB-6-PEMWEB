@@ -66,8 +66,6 @@ src/
 
 ## Screenshot
 
-> Tambahkan screenshot hasil aplikasimu ke folder `screenshots/`, lalu pastikan nama file sesuai di bawah.
-
 ![Daftar](screenshots/daftar.png)
 ![Tambah](screenshots/tambah.png)
 ![Detail](screenshots/detail.png)
